@@ -6,13 +6,11 @@
             <th>Title</th>
             <th>Author</th>
         </tr>
+        {{#each model as |book|}}
         <tr>
-            <td>Deep Work</td>
-            <td>Cal Newport</td>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
         </tr>
-        <tr>
-            <td>Why Revival Tarries</td>
-            <td>Leonard Ravenhill</td>
-        </tr>
+        {{/each}}
     </table>
 </div>

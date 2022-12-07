@@ -70,6 +70,7 @@
 .list-models table {
     border-collapse: collapse;
     width: 100%;
+    margin-bottom: 10rem;
 }
 
 .list-models th {

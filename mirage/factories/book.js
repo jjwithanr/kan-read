@@ -1,8 +1,8 @@
 import { Factory } from 'miragejs';
 
 export default Factory.extend({
-    title() {
-        return 'Book';
+    title(i) {
+        return `Book ${i + 1}`;
     },
     author() {
         return 'Moses';
