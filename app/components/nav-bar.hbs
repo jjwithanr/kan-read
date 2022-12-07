@@ -1,10 +1,12 @@
 <div class="nav">
     <ul>
         <li>
-            <h1>KanRead</h1>
+            <LinkTo @route="index">
+                <h1>KanRead</h1>
+            </LinkTo>
         </li>
         <li>
-            <LinkTo @route="books">Books</LinkTo>
+            <LinkTo @route="books" class="list-link">Books</LinkTo>
         </li>
     </ul>
 </div>
