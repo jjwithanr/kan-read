@@ -88,3 +88,24 @@
     text-align: left;
     padding-left: 4rem;
 }
+
+.container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.kanban-container {
+    /* width: 200px; */
+    height: 200px;
+    background: #DAE2B6;
+    border-radius: 25px;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.kanban-container h2 {
+    color: white;
+    
+}
