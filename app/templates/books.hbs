@@ -3,12 +3,22 @@
 
     <table>
         <tr>
+            <th></th>
+            <th></th>
             <th>Title</th>
             <th>Author</th>
         </tr>
         {{#each model as |book|}}
         <tr>
-            <td>{{book.title}}</td>
+            <td>
+                <button type="button">Edit</button>
+            </td>
+            <td>
+                <button type="button" onclick={{action "deleteBook" book}}>Delete</button>
+            </td>
+            <td>
+                <LinkTo @route="book" @model={{book.id}}>{{book.title}}</LinkTo>
+            </td>
             <td>{{book.author}}</td>
         </tr>
         {{/each}}
