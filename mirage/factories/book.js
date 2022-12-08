@@ -1,10 +1,11 @@
 import { Factory } from 'miragejs';
+import { faker } from '@faker-js/faker';
 
 export default Factory.extend({
-    title(i) {
-        return `Book ${i + 1}`;
+    title() {
+        return faker.company.catchPhrase();
     },
     author() {
-        return 'Moses';
+        return faker.name.fullName();
     }
 });
