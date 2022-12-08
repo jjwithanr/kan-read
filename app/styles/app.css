@@ -91,6 +91,15 @@
     padding-left: 4rem;
 }
 
+.list-models a {
+    color: white;
+    text-decoration: none;
+}
+
+.list-models a:hover:not(.active) {
+    color: #F4EAD5;
+}
+
 .container {
     display: block;
     margin-left: auto;
