@@ -64,7 +64,10 @@
     color: white;
     font-weight: bold;
     background-color: #DAE2B6;
-    border: 5px solid #CCD6A6; 
+    border: 5px solid #CCD6A6;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .list-models table {
@@ -100,7 +103,6 @@
     color: #DAE2B6;
 }
 
-
 .list-models a {
     color: white;
     text-decoration: none;
@@ -108,6 +110,14 @@
 
 .list-models a:hover:not(.active) {
     color: #F4EAD5;
+}
+
+.list-models .delete {
+    cursor: pointer;
+}
+
+.list-models .delete:hover:not(.active) {
+    color: #D11A2A;
 }
 
 .container {

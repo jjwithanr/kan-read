@@ -15,10 +15,14 @@
         {{#each model as |book|}}
         <tr>
             <td>
-                <LinkTo @route="edit" @model={{book.id}}>Edit</LinkTo>
+                <LinkTo @route="edit" @model={{book.id}}>
+                    <FaIcon @icon="pen-to-square" @size="2x"/>
+                </LinkTo>
             </td>
             <td>
-                <button type="button" onclick={{action "deleteBook" book}}>Delete</button>
+                <div class="delete" onclick={{action "deleteBook" book}}>
+                    <FaIcon @icon="trash-can" @size="2x"/>
+                </div>
             </td>
             <td>
                 <LinkTo @route="book" @model={{book.id}}>{{book.title}}</LinkTo>
