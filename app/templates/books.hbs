@@ -15,7 +15,7 @@
         {{#each model as |book|}}
         <tr>
             <td>
-                <button type="button">Edit</button>
+                <LinkTo @route="edit" @model={{book.id}}>Edit</LinkTo>
             </td>
             <td>
                 <button type="button" onclick={{action "deleteBook" book}}>Delete</button>
