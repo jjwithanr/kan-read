@@ -91,6 +91,16 @@
     padding-left: 4rem;
 }
 
+.list-models .create a{
+    font-weight: bold;
+    color: #CCD6A6;
+}
+
+.list-models .create a:hover:not(.active) {
+    color: #DAE2B6;
+}
+
+
 .list-models a {
     color: white;
     text-decoration: none;
