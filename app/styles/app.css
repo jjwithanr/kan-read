@@ -133,7 +133,6 @@
 }
 
 .kanban-container {
-    /* width: 200px; */
     height: 200px;
     background: #DAE2B6;
     border-radius: 25px;
@@ -144,4 +143,56 @@
 .kanban-container h2 {
     color: white;
     
+}
+
+.model-form {
+    text-align: center;
+}
+
+.model-form h1 {
+    color: #CCD6A6;
+    font-size: 4rem;
+}
+
+.model-form label {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #CCD6A6;
+    width: 150px;
+    text-align: right;
+}
+
+.model-form input[type=text] {
+    width: 50%;
+    height: 3rem;
+    margin-left: 3rem;
+    padding-left: 20px;
+    background: #DAE2B6;
+    border-radius: 25px;
+    border: 2px solid #CCD6A6;
+}
+
+.model-form input[type=text]:focus {
+    font-size: large;
+}
+
+.model-form button {
+    width: 15%;
+    height: 4rem;
+    color: white;
+    margin-top: 4rem;
+    border-radius: 25px;
+    border: 2px solid #CCD6A6;
+    background: #DAE2B6;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.model-form button:hover:not(.active) {
+    background: #CCD6A6;
 }
