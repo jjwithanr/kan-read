@@ -17,4 +17,10 @@ export default function() {
   this.get('/books/:id');
   this.patch('/books/:id');
   this.del('/books/:id');
+
+  this.get('/authors');
+  this.post('/authors');
+  this.get('/authors/:id');
+  this.patch('/authors/:id');
+  this.del('/authors/:id');
 }
