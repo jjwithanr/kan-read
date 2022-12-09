@@ -12,4 +12,5 @@ Router.map(function() {
   this.route('new', {path: '/books/new' });
   this.route('edit', { path: '/books/:id/edit' });
   this.route('authors');
+  this.route('newAuthor', { path: '/authors/new'});
 });
