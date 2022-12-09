@@ -1,2 +1,37 @@
-{{page-title "Authors"}}
-{{outlet}}
+<div class="list-models">
+
+    <div class="create">
+        <h1>Authors</h1>
+        <LinkTo @route="new" class="icon">
+            <FaIcon @icon="square-plus" class="icon" @size="2x"/>
+        </LinkTo>
+    </div>
+
+    <table>
+        <tr>
+            <th></th>
+            <th></th>
+            <th>Name</th>
+            <th>Books</th>
+        </tr>
+        <tr>
+            <td>
+                <LinkTo @route="new">
+                    <FaIcon @icon="pen-to-square" @size="2x"/>
+                </LinkTo>
+            </td>
+            <td>
+                <div class="delete">
+                    <FaIcon @icon="trash-can" @size="2x"/>
+                </div>
+            </td>
+            <td>
+                Cal Newport
+            </td>
+            <td>
+                Deep Work
+            </td>
+        </tr>
+    </table>
+
+</div>
