@@ -14,6 +14,7 @@
             <th>Name</th>
             <th>Books</th>
         </tr>
+        {{#each model as |author|}}
         <tr>
             <td>
                 <LinkTo @route="new">
@@ -26,12 +27,15 @@
                 </div>
             </td>
             <td>
-                Cal Newport
+                {{author.name}}
             </td>
             <td>
-                Deep Work
+                {{#each author.books as |book|}}
+                    {{book.title}},
+                {{/each}}
             </td>
         </tr>
+            {{/each}}
     </table>
 
 </div>

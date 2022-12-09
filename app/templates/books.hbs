@@ -29,7 +29,7 @@
             <td>
                 <LinkTo @route="book" @model={{book.id}}>{{book.title}}</LinkTo>
             </td>
-            <td>{{book.author}}</td>
+            <td>{{book.author.name}}</td>
         </tr>
         {{/each}}
     </table>

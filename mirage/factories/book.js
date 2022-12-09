@@ -5,7 +5,4 @@ export default Factory.extend({
     title() {
         return faker.company.catchPhrase();
     },
-    author() {
-        return faker.name.fullName();
-    }
 });
