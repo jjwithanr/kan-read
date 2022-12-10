@@ -2,7 +2,7 @@
 
     <div class="create">
         <h1>Authors</h1>
-        <LinkTo @route="new" class="icon">
+        <LinkTo @route="newAuthor" class="icon">
             <FaIcon @icon="square-plus" class="icon" @size="2x"/>
         </LinkTo>
     </div>
@@ -17,13 +17,13 @@
         {{#each model as |author|}}
         <tr>
             <td>
-                <LinkTo @route="new">
+                <LinkTo @route="editAuthor" @model={{author.id}}>
                     <FaIcon @icon="pen-to-square" @size="2x"/>
                 </LinkTo>
             </td>
             <td>
-                <div class="delete">
-                    <FaIcon @icon="trash-can" @size="2x"/>
+                <div class="delete" onclick={{action "deleteAuthor" author}}>
+                    <FaIcon @icon="trash-can" @size="2x" />
                 </div>
             </td>
             <td>
