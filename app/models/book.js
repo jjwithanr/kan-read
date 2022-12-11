@@ -7,7 +7,15 @@ export default class BookModel extends Model {
         defaultValue() { return "unread"; }}) status;
     @belongsTo('author') author;
 
-    @tracked isUnread = true;
-    @tracked isBeingRead = false;
-    @tracked isFinished = false;
+    get isUnread() {
+        return this.status == 'unread';
+    }
+
+    get isBeingRead() {
+        return this.status == 'reading';
+    }
+
+    get isFinished() {
+        return this.status =='finished';
+    }
 }

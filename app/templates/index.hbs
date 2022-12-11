@@ -4,11 +4,11 @@
     <h2>To Read...</h2>
         <div class="horizontal-books">
             {{#each this.model as |book|}}
-            {{#if book.isUnread}}
-                <div class="item">
-                    <LinkTo @route="edit" @model={{book.id}}>{{book.title}}</LinkTo>
-                </div>
-            {{/if}}
+                {{#if book.isUnread}}
+                    <div class="item">
+                        <LinkTo @route="edit" @model={{book.id}}>{{book.title}}</LinkTo>
+                    </div>
+                {{/if}}
             {{/each}}
         </div>
     </div>
