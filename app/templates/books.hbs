@@ -13,6 +13,7 @@
             <th></th>
             <th>Title</th>
             <th>Author</th>
+            <th>Status</th>
         </tr>
         {{#each model as |book|}}
         <tr>
@@ -29,7 +30,9 @@
             <td>
                 <LinkTo @route="book" @model={{book.id}}>{{book.title}}</LinkTo>
             </td>
-            <td>{{book.author.name}}</td>
+            <td>Test</td>
+            {{!-- <td>{{book.author.name}}</td> --}}
+            <td style="padding: 0px 35px 0px 35px;">{{book.status}}</td>
         </tr>
         {{/each}}
     </table>
