@@ -1,4 +1,7 @@
-<Input @value={{this.query}} class="light" />
+<label>
+    <span style="color: #CCD6A6;">Search book title:</span>
+    <Input @value={{this.query}} class="searchBar" />
+</label>
 
 <table>
     <tr>
@@ -8,23 +11,25 @@
         <th>Author</th>
         <th>Status</th>
     </tr>
-    {{#each @books as |book|}}
-    <tr>
-        <td>
-            <LinkTo @route="edit" @model={{book.id}}>
-                <FaIcon @icon="pen-to-square" @size="2x"/>
-            </LinkTo>
-        </td>
-        <td>
-            <div class="delete" onclick={{action "deleteBook" book}}>
-                <FaIcon @icon="trash-can" @size="2x"/>
-            </div>
-        </td>
-        <td>
-            <LinkTo @route="book" @model={{book.id}}>{{book.title}}</LinkTo>
-        </td>
-        <td>{{if book.author.name book.author.name 'unlisted'}}</td>
-        <td style="padding: 0px 35px 0px 35px;">{{book.status}}</td>
-    </tr>
-    {{/each}}
+    <BooksTable::Filter @books={{@books}} @query={{this.query}} as |results|>
+        {{#each results as |book|}}
+        <tr>
+            <td>
+                <LinkTo @route="edit" @model={{book.id}}>
+                    <FaIcon @icon="pen-to-square" @size="2x"/>
+                </LinkTo>
+            </td>
+            <td>
+                <div class="delete" onclick={{action "deleteBook" book}}>
+                    <FaIcon @icon="trash-can" @size="2x"/>
+                </div>
+            </td>
+            <td>
+                <LinkTo @route="book" @model={{book.id}}>{{book.title}}</LinkTo>
+            </td>
+            <td>{{if book.author.name book.author.name 'unlisted'}}</td>
+            <td style="padding: 0px 35px 0px 35px;">{{book.status}}</td>
+        </tr>
+        {{/each}}
+    </BooksTable::Filter>
 </table>
