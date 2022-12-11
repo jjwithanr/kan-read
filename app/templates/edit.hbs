@@ -8,10 +8,15 @@
             {{input type="text" id="title" value=model.title}}
         </div>
         <br>
-        {{!-- <div>
-            <label for="author">Author:</label>
-            {{input type="text" id="author" value=model.author}}
-        </div> --}}
+        <div class="selection">
+            <label for="status">Status:</label>
+            <select name="status" id="status">
+                <option selected disabled hidden>{{model.status}}</option>
+                <option value="unread">unread</option>
+                <option value="reading">reading</option>
+                <option value="finished">finished</option>
+            </select>
+        </div>
         
         <button type="submit">Update</button>
     </form>

@@ -6,6 +6,10 @@ export default class EditController extends Controller {
     editBook(book, event) {
         event.preventDefault();
 
+        let newStatus = document.getElementById('status').value;
+
+        book.status = newStatus;
+
         book.save().then(() => {
             this.transitionToRoute('book', book.id)
         });
