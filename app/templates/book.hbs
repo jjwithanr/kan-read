@@ -1,2 +1,5 @@
-<h1>Title: {{model.title}}</h1>
-<h2>Author: {{model.author}}</h2>
+<div class="model-details">
+    <h1>Title: {{model.title}}</h1>
+    <h2>Author: {{if model.author.name model.author.name "*not listed*" }}</h2>
+    <h2>Status: {{model.status}}</h2>
+</div>

@@ -230,7 +230,6 @@
 .model-form button:hover:not(.active) {
     background: #CCD6A6;
 }
-
 .item {
     display: inline-block;
     width: 100px;
@@ -252,4 +251,9 @@
 .item a {
     color: white;
     text-decoration: none;
+}
+
+.model-details {
+    text-align: center;
+    color: #CCD6A6;
 }
