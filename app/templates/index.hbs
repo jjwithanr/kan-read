@@ -1,15 +1,36 @@
 <div class="container">
 
     <div class="kanban-container">
-        <h2>To Read...</h2>
+    <h2>To Read...</h2>
+        <div class="horizontal-books">
+            {{#each this.model as |book|}}
+                <div class="item">
+                    <LinkTo @route="book" @model={{book.id}}>{{book.title}}</LinkTo>
+                </div>
+            {{/each}}
+        </div>
     </div>
 
     <div class="kanban-container">
         <h2>Reading right now...</h2>
+        <div class="horizontal-books">
+            {{#each this.model as |book|}}
+                <div class="item">
+                    <LinkTo @route="book" @model={{book.id}}>{{book.title}}</LinkTo>
+                </div>
+            {{/each}}
+        </div>
     </div>
 
     <div class="kanban-container">
         <h2>Finished reading....</h2>
+        <div class="horizontal-books">
+            {{#each this.model as |book|}}
+                <div class="item">
+                    <LinkTo @route="book" @model={{book.id}}>{{book.title}}</LinkTo>
+                </div>
+            {{/each}}
+        </div>
     </div>
 
 </div>

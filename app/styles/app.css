@@ -129,20 +129,44 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
+    width: 80%;
+}
+
+.container h2 {
+    margin: 0;
 }
 
 .kanban-container {
     height: 200px;
     background: #DAE2B6;
     border-radius: 25px;
-    padding: 0.5rem;
+    padding: 1rem;
     margin: 1rem;
 }
 
 .kanban-container h2 {
     color: white;
-    
+}
+
+.horizontal-books {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.horizontal-books::-webkit-scrollbar {
+    width: 3px;
+    height: 7px;
+}
+
+.horizontal-books::-webkit-scrollbar-thumb {
+    background: #c5ce9f;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+.horizontal-books::-webkit-scrollbar-thumb:hover {
+    background: #a1a883;
+    border-radius: 5px;
 }
 
 .model-form {
@@ -173,8 +197,18 @@
     border: 2px solid #CCD6A6;
 }
 
-.model-form input[type=text]:focus {
-    font-size: large;
+.model-form select {
+    appearance: auto;
+    text-align: center;
+    font-weight: bold;
+    width: 30%;
+    height: 3rem;
+    margin-left: 3rem;
+    padding-left: 20px;
+    background: #DAE2B6;
+    border-radius: 25px;
+    border: 2px solid #CCD6A6;
+    box-sizing: border-box;
 }
 
 .model-form button {
@@ -195,4 +229,27 @@
 
 .model-form button:hover:not(.active) {
     background: #CCD6A6;
+}
+
+.item {
+    display: inline-block;
+    width: 100px;
+    height: 125px;
+    border-radius: 10px;
+    background: #CB8F32;
+    color: white;
+    margin: 15px;
+    padding: 3px;
+    text-align: center;
+    overflow: auto;
+    white-space: normal;
+}
+
+.item::-webkit-scrollbar {
+    display: none;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
 }
