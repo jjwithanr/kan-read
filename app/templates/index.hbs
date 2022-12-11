@@ -4,9 +4,11 @@
     <h2>To Read...</h2>
         <div class="horizontal-books">
             {{#each this.model as |book|}}
+            {{#if book.isUnread}}
                 <div class="item">
-                    <LinkTo @route="book" @model={{book.id}}>{{book.title}}</LinkTo>
+                    <LinkTo @route="edit" @model={{book.id}}>{{book.title}}</LinkTo>
                 </div>
+            {{/if}}
             {{/each}}
         </div>
     </div>
@@ -15,9 +17,11 @@
         <h2>Reading right now...</h2>
         <div class="horizontal-books">
             {{#each this.model as |book|}}
+            {{#if book.isBeingRead}}
                 <div class="item">
-                    <LinkTo @route="book" @model={{book.id}}>{{book.title}}</LinkTo>
+                    <LinkTo @route="edit" @model={{book.id}}>{{book.title}}</LinkTo>
                 </div>
+            {{/if}}
             {{/each}}
         </div>
     </div>
@@ -26,9 +30,11 @@
         <h2>Finished reading....</h2>
         <div class="horizontal-books">
             {{#each this.model as |book|}}
+            {{#if book.isFinished}}
                 <div class="item">
-                    <LinkTo @route="book" @model={{book.id}}>{{book.title}}</LinkTo>
+                    <LinkTo @route="edit" @model={{book.id}}>{{book.title}}</LinkTo>
                 </div>
+            {{/if}}
             {{/each}}
         </div>
     </div>

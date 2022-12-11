@@ -238,10 +238,12 @@
     background: #CB8F32;
     color: white;
     margin: 15px;
-    padding: 3px;
+    padding: 3px 0;
     text-align: center;
     overflow: auto;
     white-space: normal;
+    font-size: smaller;
+    text-decoration: none;
 }
 
 .item::-webkit-scrollbar {
