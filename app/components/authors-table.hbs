@@ -1,0 +1,37 @@
+<label>
+    <span style="color: #CCD6A6;">Search author name:</span>
+    <Input @value={{this.query}} class="searchBar" />
+</label>
+
+<table>
+    <tr>
+        <th></th>
+        <th></th>
+        <th>Name</th>
+        <th>Books</th>
+    </tr>
+    <AuthorsTable::Filter @authors={{@authors}} @query={{this.query}} as |results|>
+        {{#each results as |author|}}
+        <tr>
+            <td>
+                <LinkTo @route="editAuthor" @model={{author.id}}>
+                    <FaIcon @icon="pen-to-square" @size="2x"/>
+                </LinkTo>
+            </td>
+            <td>
+                <div class="delete" onclick={{action "deleteAuthor" author}}>
+                    <FaIcon @icon="trash-can" @size="2x" />
+                </div>
+            </td>
+            <td>
+                {{author.name}}
+            </td>
+            <td>
+                {{#each author.books as |book|}}
+                    {{book.title}},
+                {{/each}}
+            </td>
+        </tr>
+        {{/each}}
+    </AuthorsTable::Filter>
+</table>
