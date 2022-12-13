@@ -4,8 +4,10 @@ export default function(server) {
     Seed your development database using your factories.
     This data will not be loaded in your tests.
   */
-  server.createList('author', 5).forEach(author => {
-    server.createList('book', 2, { authorName: author.name}).forEach(book => {
+  let authorAmount = Math.floor(Math.random() * 10) + 4;
+  server.createList('author', authorAmount).forEach(author => {
+    let bookAmount = Math.floor(Math.random() * 7) + 2;
+    server.createList('book', bookAmount, { authorName: author.name}).forEach(book => {
       if (!author.bookList) {
         author.update({
           bookList: book.title + ", "
@@ -15,13 +17,13 @@ export default function(server) {
           bookList: author.bookList + book.title + ", "
         });
       }
+      book.update({
+        author: author
+      });
     });
-    
-    if (author.bookList) {
       author.update({
         bookList: author.bookList.slice(0, -2)
       });
-    }
 
   });
 }
