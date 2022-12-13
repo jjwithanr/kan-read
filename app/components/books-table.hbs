@@ -27,7 +27,7 @@
             <td>
                 <LinkTo @route="book" @model={{book.id}}>{{book.title}}</LinkTo>
             </td>
-            <td>{{if book.author.name book.author.name 'unlisted'}}</td>
+            <td>{{book.authorName}}</td>
             <td style="padding: 0px 35px 0px 35px;">{{book.status}}</td>
         </tr>
         {{/each}}

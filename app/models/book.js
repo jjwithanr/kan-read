@@ -5,6 +5,7 @@ export default class BookModel extends Model {
     @attr('string') title;
     @attr('string', { 
         defaultValue() { return "unread"; }}) status;
+    @attr('string') authorName;
     @belongsTo('author') author;
 
     get isUnread() {
@@ -18,4 +19,5 @@ export default class BookModel extends Model {
     get isFinished() {
         return this.status =='finished';
     }
+
 }

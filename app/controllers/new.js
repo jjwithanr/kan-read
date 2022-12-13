@@ -8,7 +8,7 @@ export default class NewController extends Controller {
 
         let book = this.store.createRecord('book', {
             title: this.title,
-            author: this.author
+            author: this.authorName
         });
 
         book.save().then(() => {
