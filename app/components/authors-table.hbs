@@ -27,9 +27,7 @@
                 {{author.name}}
             </td>
             <td>
-                {{#each author.books as |book|}}
-                    {{book.title}},
-                {{/each}}
+                {{author.bookList}}
             </td>
         </tr>
         {{/each}}
