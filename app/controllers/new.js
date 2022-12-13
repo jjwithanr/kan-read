@@ -6,9 +6,17 @@ export default class NewController extends Controller {
     createBook(event) {
         event.preventDefault();
 
+        let authorId = document.getElementById('authorName').value
+        let author = this.store.peekRecord('author', authorId);
+        if (author.bookList) {
+            author.bookList = author.bookList + ", " + this.title;
+        } else {
+            author.bookList = this.title;
+        }
+
         let book = this.store.createRecord('book', {
             title: this.title,
-            author: this.authorName
+            authorName: author.name,
         });
 
         book.save().then(() => {

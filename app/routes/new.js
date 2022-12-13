@@ -5,4 +5,7 @@ export default class NewRoute extends Route {
         controller.set('title', '');
         controller.set('author', '');
     }
+    model() {
+        return this.store.findAll('author');
+    }
 }
