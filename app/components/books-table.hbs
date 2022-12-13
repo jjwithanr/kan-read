@@ -20,7 +20,7 @@
                 </LinkTo>
             </td>
             <td>
-                <div class="delete" onclick={{action "deleteBook" book}}>
+                <div class="delete" onclick={{action "deleteBook" book @books @authors}}>
                     <FaIcon @icon="trash-can" @size="2x"/>
                 </div>
             </td>
