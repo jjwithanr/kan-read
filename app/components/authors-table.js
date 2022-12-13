@@ -6,7 +6,12 @@ export default class AuthorsTableComponent extends Component {
     @tracked query = '';
     
     @action
-    deleteAuthor(author) {
+    deleteAuthor(author, books) {
+        books.forEach(book => {
+            if (author.name == book.authorName) {
+                book.destroyRecord();
+            }
+        });
         author.destroyRecord();
     }
 }
