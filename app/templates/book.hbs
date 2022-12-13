@@ -1,5 +1,16 @@
 <div class="model-details">
-    <h1>Title: {{model.title}}</h1>
-    <h2>Author: {{if model.author.name model.author.name "*not listed*" }}</h2>
-    <h2>Status: {{model.status}}</h2>
+    <table>
+        <tr>
+            <td><h1>Title:</h1></td>
+            <td><h1>{{model.title}}</h1></td>
+        </tr>
+        <tr>
+            <td><h1>Author:</h1></td>
+            <td><h1>{{model.authorName}}</h1></td>
+        </tr>
+        <tr>
+            <td><h1>Status:</h1></td>
+            <td><h1>{{model.status}}</h1></td>
+        </tr>
+    </table>
 </div>
