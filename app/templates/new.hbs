@@ -9,8 +9,13 @@
         </div>
         <br>
         <div>
-            <label for="author">Author:</label>
-            {{input type="text" id="author" value=author}}
+            <label for="authorName">Author:</label>
+            {{!-- {{input type="text" id="authorName" value=authorName}} --}}
+            <select name="authorName" id="authorName">
+                {{#each @model as |author|}}
+                    <option value={{author.id}}>{{author.name}}</option>
+                {{/each}}
+            </select>
         </div>
         
         <button type="submit">Create</button>
