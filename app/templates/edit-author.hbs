@@ -2,10 +2,10 @@
 
     <h1>Update Author</h1>
 
-    <form onsubmit={{action "editAuthor" model}}>
+    <form onsubmit={{action "editAuthor" model.author model.authors model.books}}>
         <div>
             <label for="name">Name:</label>
-            {{input type="text" id="name" value=model.name}}
+            {{input type="text" id="name" value=model.author.name}}
         </div>
         
         <button type="submit">Update</button>

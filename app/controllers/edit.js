@@ -1,6 +1,5 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
-import { faBookJournalWhills } from '@fortawesome/free-solid-svg-icons';
 
 export default class EditController extends Controller {
     @action
