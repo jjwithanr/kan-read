@@ -11,16 +11,30 @@ module('Unit | Model | author', function(hooks) {
     assert.ok(model);
   });
 
-  test('should be written by an author', function(assert) {
-    const book = this.owner.lookup('service:store').modelFor('book');
+  test('should have books', function(assert) {
+    const author = this.owner.lookup('service:store').modelFor('author');
 
-    const relationship = get(book, 'relationshipsByName').get('author');
+    const relationship = get(author, 'relationshipsByName').get('books');
 
-    assert.equal(relationship.key, 'author', 'has relationship with author');
+    assert.equal(relationship.key, 'books', 'has relationship with book');
     assert.equal(
       relationship.kind,
-      'belongsTo',
-      'kind of relationship is belongsTo'
+      'hasMany',
+      'kind of relationship is hasMany'
     );
+  });
+
+  test('it has the right name', function (assert) {
+    let store = this.owner.lookup('service:store');
+    let author = store.createRecord('author', {
+      name: 'Jeremy Chang',
+      bookList: 'How To Test Ember JS',
+    });
+
+    assert.strictEqual(author.name, 'Jeremy Chang');
+    author.name = "Jerry Chong";
+    assert.strictEqual(author.name, 'Jerry Chong');
+    author.name = "Terry Cheng"
+    assert.strictEqual(author.name, 'Terry Cheng');
   });
 });
