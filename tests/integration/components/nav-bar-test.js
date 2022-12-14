@@ -1,26 +1,16 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, click, visit, currentURL } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Component | nav-bar', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
     await render(hbs`<NavBar />`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.dom('h1').hasText('KanRead');
 
-    // Template block usage:
-    await render(hbs`
-      <NavBar>
-        template block text
-      </NavBar>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom('.nav a.list-link').hasText('Books');
   });
 });
