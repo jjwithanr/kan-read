@@ -13,20 +13,28 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone https://github.com/jjwithanr/kan-read.git` this repository
-* `cd kan-read`
-* `npm install`
+```console
+$ git clone https://github.com/jjwithanr/kan-read.git
+```
+```console
+$ cd kan-read
+```
+```console
+$ npm install
+```
 
 ## Running / Development
 
-* `ember serve`
+```console
+$ ember serve
+```
 * Visit the app at [http://localhost:4200](http://localhost:4200).
-* Index page should load:
 ![index page](index.jpg)
+* Visit the tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
 
 ### Running Tests
 
-* Visit the tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-* `ember test`
-* `ember test --server`
+```console
+$ ember test --server
+```
