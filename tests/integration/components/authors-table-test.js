@@ -7,20 +7,9 @@ module('Integration | Component | authors-table', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
     await render(hbs`<AuthorsTable />`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <AuthorsTable>
-        template block text
-      </AuthorsTable>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom('label').hasText('Search author name:');
+    assert.dom('tr').hasText('Name Books');
   });
 });

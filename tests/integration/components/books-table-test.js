@@ -7,20 +7,9 @@ module('Integration | Component | books-table', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
     await render(hbs`<BooksTable />`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <BooksTable>
-        template block text
-      </BooksTable>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom('label').hasText('Search book title:');
+    assert.dom('tr').hasText('Title Author Status');
   });
 });
