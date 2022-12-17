@@ -5,7 +5,7 @@ export default class BooksTableFilterComponent extends Component {
         let { books, query } = this.args;
     
         if (query) {
-            books = books.filter((book) => book.title.includes(query));
+            books = books.filter((book) => book.title.toLowerCase().includes(query.toLowerCase()));
         }
     
         return books;

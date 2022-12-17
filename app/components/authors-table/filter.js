@@ -5,7 +5,7 @@ export default class AuthorsTableFilterComponent extends Component {
         let { authors, query } = this.args;
     
         if (query) {
-            authors = authors.filter((author) => author.name.includes(query));
+            authors = authors.filter((author) => author.name.toLowerCase().includes(query.toLowerCase()));
         }
     
         return authors;
