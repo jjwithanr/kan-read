@@ -9,6 +9,10 @@ export default class NewController extends Controller {
         let authorId = document.getElementById('authorName').value
         let author = this.store.peekRecord('author', authorId);
         if (author.bookList) {
+            if (author.bookList.includes(this.title)) {
+                alert("A book with this title from this author already exists.");
+                return;
+            }
             author.bookList = author.bookList + ", " + this.title;
         } else {
             author.bookList = this.title;
