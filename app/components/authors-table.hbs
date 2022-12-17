@@ -28,8 +28,8 @@
             <td>
                 {{author.name}}
             </td>
-            <td>
-                {{author.bookList}}
+            <td style="width: 50%; overflow: hidden; text-overflow: ellipsis;">
+                <AuthorsTable::ShowMoreBooks @books={{author.bookList}}/> 
             </td>
         </tr>
         {{/each}}

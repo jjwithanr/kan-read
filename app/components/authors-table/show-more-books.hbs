@@ -1,0 +1,9 @@
+{{#if this.showLess}}
+    <button type="button" class="shortened" onclick={{action "toggleShow"}}>
+        {{@books}}
+    </button>
+{{else}}
+    <button type="button" onclick={{action "toggleShow"}}>
+        {{@books}}
+    </button>
+{{/if}}

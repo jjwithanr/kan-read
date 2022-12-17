@@ -282,3 +282,22 @@
     box-shadow: 0 0 5px #719ECE;
     border: 3px solid #DAE2B6;
 }
+
+.authorResults button {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    z-index: 1;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    width: 75%;
+}
+
+.authorResults button.shortened {
+    width: 450px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
